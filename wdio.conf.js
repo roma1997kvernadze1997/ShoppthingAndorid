@@ -32,7 +32,7 @@ exports.config = {
         'platformName': 'Android',
         'appium:platformVersion': '13',
         'appium:deviceName': 'Google Pixel 4',
-        'appium:app': "C:\\Users\\romak\\appium-wdio1\\app\\android\\app-debug144.apk",
+        'appium:app': "C:\\Users\\romak\\appium-wdio1\\app\\android\\app-debug.apk",
         'path': '/wd/hub',
         'appium:automationName': 'UIAutomator2'
     }],
