@@ -1,5 +1,7 @@
 
-# Appium + WebDriver.IO Demo Framework - Android & IOS
+# Shopthing
+
+# Appium + WebDriverIO - Android & IOS
 
 ## General System Requirements
 
@@ -13,7 +15,7 @@ We need node js to download Appium beta version & drivers easily.
 * [JAVA_HOME setup for Windows](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
 * [JAVA_HOME setup for Mac](https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/)
 
-I Tested the following steps on MAC OS Monterrey:
+I Tested the following steps on MAC OS:
 
 * Installed Adopted [Open JDK with Homebrew](https://formulae.brew.sh/cask/adoptopenjdk)
 * To return where was the SDK installed I used the command:
@@ -118,9 +120,9 @@ For this project you can use the following configuration:
 
 | Server Key | Server Value |
 | ------------- | ------------- |
-| Remote Host | 0.0.0.0 |
-| Remote Port | 4724 |
-| Remote Path | / |
+| Remote Host | localhost |
+| Remote Port | 4723 |
+| Remote Path | /wd/hub |
 
 Android Desired Capabilities(Example)
 | Desired Capability Key  | Desired Capability Value |
@@ -178,15 +180,6 @@ Check the installed drivers using
 appium driver list
 ```
 
-#### Sample applications
-Sample Application that you can use:
-
-[SauceDemo Hybrid App - React Native)](https://github.com/saucelabs/my-demo-app-rn) - (Framework is configured to use this one)
-
-[Sauce Labs Native Sample Application](https://github.com/saucelabs/sample-app-mobile)
-
-[WebdriverIO Demo App for iOS and Android](https://github.com/webdriverio/native-demo-app)
-
 ***Important Note:***
 For IOS you are going to need an app build to run it in simulators, but an .IPA file to run it in real devices. It required additonal desired capabilities, and you can see which ones in the next article: [Appium XCUITest Driver Real Device Setup
 ](https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/)
@@ -218,8 +211,8 @@ For IOS you are going to need an app build to run it in simulators, but an .IPA 
 * Declare where it is going to be located
 ```bash
 const projectPath = require('path')
-const androidAppPath = projectPath.join(process.cwd(), "app/android/Android-MyDemoAppRN.1.3.0.build-244.apk")
-const iosAppPath = projectPath.join(process.cwd(),"app/ios/MyRNDemoApp.app");
+const androidAppPath = projectPath.join(process.cwd(), "app/android/shopthing.apk")
+const iosAppPath = projectPath.join(process.cwd(),"app/ios/shopthing.app");
 ```
 
 * Set up the capabilities for Android(Emulator sample)
@@ -233,7 +226,7 @@ capabilities: [{
         // "appium:appWaitActivity": "com.swaglabsmobileapp.MainActivity"(For OLD swaglabs app)
     }]
 ```
-* Set up the capabilities for Android(Emulator sample)
+* Set up the capabilities for IOS(Emulator sample)
 ```bash
 capabilities: [{
         platformName: 'IOS',
@@ -264,32 +257,12 @@ npx wdio
 ```
 
 ## Setup WebDriverIO
-if you want to run this project:
-
 1- Install all the system requirements
-
 2- Clone the project
-
 3- Run: npm i
-
 4- Download the android app and place it under app/android or app/IOS
-
 5- npm run wdioIOS/wdioAndroid
 
-## Android setup & demo
-[![ANDROID TESTING VIDEO](https://i.ytimg.com/vi/KN1sTvvX0mM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgoIVXC8QqNpzuuw9sdzSkOos1lg)](https://www.youtube.com/watch?v=KN1sTvvX0mM&t=2569s)
-
-## IOS setup & demo
-[![IOS TESTING VIDEO](https://i.ytimg.com/vi/Q5Oy8axA8Qw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoa-PxuNR5xJ0U8NM4J0sigtqwgg)](https://www.youtube.com/watch?v=Q5Oy8axA8Qw&ab_channel=JoanMedia)
-
-
-### Extra Information
-
-* [UI Selectors (Android)](https://developer.android.com/reference/androidx/test/uiautomator/UiSelector)
-
-* [Predicate Strings Selectors (IOS)](https://appium.io/docs/en/writing-running-appium/ios/ios-predicate/)
-
-* [Class Chain Selectors (IOS)](https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules)
 
 ### Notes
 * To manage node versions you can install "n" using the command "npm install -g n". Then you can install the version you may need, for instance "n 16.15.1"(LTS version where this project is working fine.)
