@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "112236660743",
+    "firebase_url": "https://lstcommerce-staging.firebaseio.com",
+    "project_id": "lstcommerce-staging",
+    "storage_bucket": "lstcommerce-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112236660743:android:f23d295571a3bc4ab342a2",
+        "android_client_info": {
+          "package_name": "com.shopthing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112236660743-j6tts85mvpjc406ujk16uu6rc60mn840.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shopthing",
+            "certificate_hash": "9441bcc0cbaf7bbf757c68b15e4effa371323e54"
+          }
+        },
+        {
+          "client_id": "112236660743-nngqlrrtss50smqtecs6qp3gbnr1gfv7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shopthing",
+            "certificate_hash": "f6284bf7af43999af865b378cf0714e5f0787660"
+          }
+        },
+        {
+          "client_id": "112236660743-i8uo8asnom1psrjfs1qhrqa1ml3actna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpmxmBhvlQOiRb5EPKX1XZ72o43OHzvN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112236660743-i8uo8asnom1psrjfs1qhrqa1ml3actna.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "112236660743-u1ar0vs334g90ss8d4jb2ih3dgpomhh1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shopthing.app",
+                "app_store_id": "1522774665"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
